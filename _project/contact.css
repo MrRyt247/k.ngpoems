@@ -1,0 +1,245 @@
+:root {
+    --grey: rgb(55, 55, 55);
+    --goldenrod: goldenrod;
+    --gold: gold;
+    --white: #fff;
+    --black: rgb(25, 25, 25);
+    --alphaGrey: rgba(55, 55, 55, 0.67);
+    --alphaBlack: rgba(25, 25, 25, 0.8);
+    --glass: rgba(205, 205, 205, .32);
+    --max-width: 520px;
+    --max-height: 470px;
+    font-size: 17px;
+    font-family: 'Helvetica Neue', 'Segoe UI', Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    background-image: url(Images/Contact.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 70%;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* navBar */
+
+header {
+    width: 100%;
+    height: 1.8rem;
+    font-size: .9rem;
+    background-color: var(--grey);
+    border-bottom: solid .2px var(--gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 .7rem;
+}
+
+.logo img {
+    position: relative;
+    top: 2.5px;
+    width: 3.2rem;
+}
+  
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    margin: 0 2.2rem;
+    width: 5rem;
+    height: 1.6rem;
+}
+  
+.nav-menu li a, .dropdown-menu li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.dropdown {
+    align-items: center;
+    width: 25px;
+}
+
+.options {
+    display: grid;
+    gap: 1.5px;
+    cursor: pointer;
+    padding: .4rem .4rem;
+    width: 17px;
+    height: 14px;
+    transition: transform .2s ease-in-out;
+}
+  
+.options span {
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.options:hover {
+    transform: rotate(90deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: var(--grey);
+    border-bottom: solid .3px var(--gold);
+    width: 5rem;
+    overflow: hidden;
+    transform: translateX(-45px);
+    list-style: none;
+    margin: 0;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    height: 1.6rem;
+    margin: 0 0 .1rem 0;
+    transform: translateX(-39px);
+}
+
+.nav-menu li:last-of-type, .nav-menu li:hover, .dropdown-menu li:hover, .options:hover {
+    background: linear-gradient(90deg, var(--grey), var(--black) 10% 90%, var(--grey));
+}
+
+/* main */
+
+main {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 2.6rem);
+}
+
+/* container */
+
+.container {
+    height: var(--max-height);
+    max-width: var(--max-width);
+    border: solid .2px var(--gold);
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: var(--glass);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 .9rem 1.7rem rgba(0, 0, 0, .25), 0 .7rem .7rem rgba(0, 0, 0, .22);
+    transition: background .4s ease-in-out;
+}
+
+.container:hover {
+    background: linear-gradient(90deg, var(--alphaGrey), var(--glass) 35% 65%, var(--alphaGrey));
+}  
+
+h1 {
+    line-height: 35px;
+    font-size: 3.2rem;
+    font-family: 'Kaufmann BT', 'Mistral';
+    font-weight: 100;
+    color: var(--gold);
+    -webkit-text-stroke: var(--goldenrod) .3px ;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    line-height: 20px;
+    font-size: 2rem;
+    font-family: 'Mistral', cursive;
+    font-weight: 100;
+    text-align: left;
+    color: var(--goldenrod);
+    filter: brightness(130%);
+}
+
+p {
+    color: var(--black);
+    font-weight: 250;
+    text-align: left;
+    margin: .6rem;
+}
+
+a {
+    color: var(--goldenrod);
+    filter: brightness(110%);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    transform: translateY(-5px);
+}
+
+/* button */
+
+.btn {
+    background-color: var(--gold);
+    background-image: linear-gradient(105deg, var(--goldenrod) 26%, var(--gold) 50%, var(--goldenrod) 74%);
+    border: solid .2px var(--gold);
+    color: var(--white);
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    margin-top: 2rem;
+    padding: .9rem 2rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in, filter 80ms ease-in-out;
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+.btn:hover {
+    filter: brightness(110%);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* footer */
+
+footer p {
+    height: auto;
+    color: var(--white);
+    font-size: .7rem;
+    font-family: monospace;
+    text-align: end;
+    margin: 0;
+    padding-right: .7rem;
+}
