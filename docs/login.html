@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <title>Join Us</title>
+    </head>
+    <body>
+        <div class="container right-active">
+            <!--sign up-->
+            <div class="container__form container--signup">
+                <form action="home.html" class="form" id="form1" method="post">
+                    <h2>Sign Up</h2>
+                    <input type="text" placeholder="Firstname | Other names | Lastname" class="input" required minlength="4" maxlength="35" style="text-transform: capitalize;">
+                    <input type="email" placeholder="Email" class="input" required>
+                    <input type="password" placeholder="Password" minlength="8" maxlength="20" id="pswd" class="input" required>
+                    <input type="password" placeholder="Confirm Password" minlength="8" maxlength="20" id="cnfmpswd" class="input" required>
+                    <p id="alert"><br></p>
+                    <button class="btn" onclick="authenticate()">Sign Up</button>
+                </form>
+            </div>
+            <!--sign in-->
+            <div class="container__form container--signin">
+                <form action="home.html" autocomplete="on" class="form" id="form2" method="post">
+                    <h2>Sign In</h2>
+                    <input type="text" placeholder="Username" class="input" required minlength="2" maxlength="35" style="text-transform: capitalize;">
+                    <input type="email" placeholder="Email" class="input" required>
+                    <input type="password" placeholder="Password" minlength="8" maxlength="20" class="input" required>
+                    <a href="https://support.google.com" class="link">Forgot your password?</a>
+                    <button class="btn">Sign In</button>
+                </form>
+            </div>
+            <!--overlay-->
+            <div class="container__overlay">
+                <div class="overlay">
+                    <div class="overlay__panel overlay--left">
+                        <h1>Already with us?</h1>
+                        <button class="btn" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay__panel overlay--right">
+                        <h1>New here?</h1>
+                        <button class="btn" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="login.js"></script>
+    </body>
+</html>
